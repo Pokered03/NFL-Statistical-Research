@@ -1,0 +1,23 @@
+{
+  "sport": "nfl",
+  "database_bytes": 4476928,
+  "seasons": [
+    {
+      "season": 2023,
+      "games": 285
+    },
+    {
+      "season": 2024,
+      "games": 285
+    },
+    {
+      "season": 2025,
+      "games": 285
+    },
+    {
+      "season": 2026,
+      "games": 272
+    }
+  ],
+  "integrity": "ok"
+}

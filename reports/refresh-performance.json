@@ -1,0 +1,9 @@
+{
+  "sport": "nfl",
+  "operation": "Active-season cached free-data refresh plus full chronological validation",
+  "seconds": 1.8530322209999213,
+  "worker_peak_rss_mib": 99.5078125,
+  "exit_code": 0,
+  "target_peak_rss_mib": 650,
+  "hosting_environment": false
+}

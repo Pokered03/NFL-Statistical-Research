@@ -1,0 +1,242 @@
+{
+  "n": 323,
+  "brier": 0.23131649141413593,
+  "baseline_brier": 0.25,
+  "accuracy": 0.6253869969040248,
+  "margin_mae": 10.369971406066764,
+  "total_mae": 10.700010994293516,
+  "ece": 0.08643507250420744,
+  "calibration_bins": [
+    {
+      "lower": 0.1,
+      "n": 1,
+      "predicted": 0.15160519628085484,
+      "observed": 1.0
+    },
+    {
+      "lower": 0.2,
+      "n": 19,
+      "predicted": 0.2663906045975806,
+      "observed": 0.2631578947368421
+    },
+    {
+      "lower": 0.3,
+      "n": 13,
+      "predicted": 0.3636810082452821,
+      "observed": 0.3076923076923077
+    },
+    {
+      "lower": 0.4,
+      "n": 48,
+      "predicted": 0.45522891764734336,
+      "observed": 0.3125
+    },
+    {
+      "lower": 0.5,
+      "n": 77,
+      "predicted": 0.5483385638251432,
+      "observed": 0.5714285714285714
+    },
+    {
+      "lower": 0.6,
+      "n": 78,
+      "predicted": 0.6451024003057041,
+      "observed": 0.44871794871794873
+    },
+    {
+      "lower": 0.7,
+      "n": 51,
+      "predicted": 0.7496722021989186,
+      "observed": 0.7450980392156863
+    },
+    {
+      "lower": 0.8,
+      "n": 32,
+      "predicted": 0.8361746877744137,
+      "observed": 0.78125
+    },
+    {
+      "lower": 0.9,
+      "n": 4,
+      "predicted": 0.9142297891775736,
+      "observed": 1.0
+    }
+  ],
+  "margin_interval_80_coverage": 0.7708978328173375,
+  "version": "adjusted-score-v1",
+  "status": "tested",
+  "gate": true,
+  "calibration_n": 420,
+  "calibration_through": "2024-12-22",
+  "test_from": "2024-12-23",
+  "test_through": "2026-10-22",
+  "oos_games": 743,
+  "calibrator": {
+    "intercept": 0.05116101354624493,
+    "slope": 1.1045616171092334
+  },
+  "margin_sd": 12.887379173216592,
+  "margin_q10": -15.242344675953763,
+  "margin_q90": 17.821069846619462,
+  "total_q10": -15.338593086440497,
+  "total_q90": 17.328680193372577,
+  "baseline_margin_mae": 11.192860286717387,
+  "baseline_total_mae": 11.013865269972488,
+  "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
+  "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
+  "market_validation": {
+    "spread": {
+      "n": 319,
+      "brier": 0.2623839734430867,
+      "baseline_brier": 0.25,
+      "ece": 0.11583818480370212,
+      "bins": [
+        {
+          "lower": 0.2,
+          "n": 9,
+          "predicted": 0.2486772486772487,
+          "observed": 0.5555555555555556
+        },
+        {
+          "lower": 0.3,
+          "n": 32,
+          "predicted": 0.3503720238095238,
+          "observed": 0.34375
+        },
+        {
+          "lower": 0.4,
+          "n": 55,
+          "predicted": 0.4494372294372294,
+          "observed": 0.6181818181818182
+        },
+        {
+          "lower": 0.5,
+          "n": 122,
+          "predicted": 0.5525956284153006,
+          "observed": 0.47540983606557374
+        },
+        {
+          "lower": 0.6,
+          "n": 63,
+          "predicted": 0.6417233560090704,
+          "observed": 0.5238095238095238
+        },
+        {
+          "lower": 0.7,
+          "n": 31,
+          "predicted": 0.7370199692780338,
+          "observed": 0.5483870967741935
+        },
+        {
+          "lower": 0.8,
+          "n": 6,
+          "predicted": 0.8182539682539683,
+          "observed": 0.5
+        },
+        {
+          "lower": 0.9,
+          "n": 1,
+          "predicted": 0.9047619047619048,
+          "observed": 1.0
+        }
+      ],
+      "gate": false,
+      "categories": {
+        "moderate": {
+          "n": 154,
+          "observed_selected_direction_rate": 0.525974025974026,
+          "wilson_95_lower": 0.44744089395152,
+          "supported": false
+        },
+        "strong": {
+          "n": 87,
+          "observed_selected_direction_rate": 0.5402298850574713,
+          "wilson_95_lower": 0.43602640443965585,
+          "supported": false
+        }
+      },
+      "reason": "Gate: at least 200 held-out non-push line comparisons, ECE <=0.10, Brier <0.25. A category additionally needs 50 held-out cases and a Wilson lower bound above 50%. No prices/returns evaluated.",
+      "pushes_excluded": 4,
+      "source": "nflverse schedule historical closing line",
+      "line_range": [
+        -19.5,
+        13.5
+      ]
+    },
+    "total": {
+      "n": 323,
+      "brier": 0.2632962483238909,
+      "baseline_brier": 0.25,
+      "ece": 0.09949137549756745,
+      "bins": [
+        {
+          "lower": 0.3,
+          "n": 14,
+          "predicted": 0.3489795918367347,
+          "observed": 0.42857142857142855
+        },
+        {
+          "lower": 0.4,
+          "n": 110,
+          "predicted": 0.4545238095238095,
+          "observed": 0.5818181818181818
+        },
+        {
+          "lower": 0.5,
+          "n": 97,
+          "predicted": 0.5529945999018164,
+          "observed": 0.5463917525773195
+        },
+        {
+          "lower": 0.6,
+          "n": 78,
+          "predicted": 0.6353785103785103,
+          "observed": 0.5256410256410257
+        },
+        {
+          "lower": 0.7,
+          "n": 21,
+          "predicted": 0.7321995464852608,
+          "observed": 0.38095238095238093
+        },
+        {
+          "lower": 0.8,
+          "n": 3,
+          "predicted": 0.8142857142857144,
+          "observed": 0.6666666666666666
+        }
+      ],
+      "gate": false,
+      "categories": {
+        "moderate": {
+          "n": 175,
+          "observed_selected_direction_rate": 0.48,
+          "wilson_95_lower": 0.4072059271874658,
+          "supported": false
+        },
+        "strong": {
+          "n": 50,
+          "observed_selected_direction_rate": 0.52,
+          "wilson_95_lower": 0.38511512258808434,
+          "supported": false
+        }
+      },
+      "reason": "Gate: at least 200 held-out non-push line comparisons, ECE <=0.10, Brier <0.25. A category additionally needs 50 held-out cases and a Wilson lower bound above 50%. No prices/returns evaluated.",
+      "pushes_excluded": 0,
+      "source": "nflverse schedule historical closing line",
+      "line_range": [
+        32.5,
+        56.5
+      ]
+    }
+  },
+  "early": {
+    "n": 157,
+    "margin_mae": 10.040340884141896
+  },
+  "late": {
+    "n": 166,
+    "margin_mae": 10.681730393670405
+  },
+  "generated_at": "2026-10-24T10:08:26.965881+00:00"
+}
