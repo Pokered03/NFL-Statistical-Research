@@ -1,6 +1,6 @@
 # NFL Statistical Research Dashboard
 
-Status: **independently implemented and locally tested development build; not deployed; not complete.**
+Status: **live development build; initial hosted checks passed; full specification not complete.**
 
 This repository is a single-sport, standalone Streamlit research application. It has no runtime dependency on another project, no imports from another dashboard, and no access to the existing Multi-Sport Value Engine. Every project has its own SQLite file, worker, model, caches, dependency specification and optional refresh workflow.
 
@@ -45,7 +45,7 @@ No Odds API key is read, requested, or used. No paid data integration is enabled
 
 Historical nflverse closing spreads and totals are now evaluated separately. The measured baseline fails both probability/category release gates, so spread and total remain PASS for an evidence-based reason rather than an assumed score. See `market_validation` in the backtest report. Original `spread_line` is positive for a home favorite; it is normalized to the manual-entry home-spread convention (negative for favorite).
 
-Unverified injury/availability feeds, some requested advanced inputs, public redistribution permissions, account-backed deployment, active refresh schedules and actual host-limit/browser checks remain unfinished. The full specification has not been completed.
+Unverified injury/availability feeds, some requested advanced inputs, some metric redistribution permissions, complete mobile checks, and extended hosted stability checks remain unfinished. The full specification has not been completed.
 
 ## Confidence panels
 
@@ -68,15 +68,15 @@ The local target is cold AppTest render under 10 seconds, matchup switching unde
 
 ## GitHub and deployment preparation
 
-The private [Pokered03/NFL-Statistical-Research](https://github.com/Pokered03/NFL-Statistical-Research) repository contains this project, its prepared database, independent tests, and guarded refresh workflow. A downloaded GitHub archive was compared byte for byte with all 46 original tracked files: no missing or changed files. The downloaded copy passed 36 software tests (5 unrelated sport cases skipped), data integrity checks and a local HTTP server check. See PUBLICATION_CHECKPOINT.md for measured results and remaining work. No changes were made to the existing Multi-Sport Value Engine.
+The public [Pokered03/NFL-Statistical-Research](https://github.com/Pokered03/NFL-Statistical-Research) repository contains this project, its prepared database, independent tests, and guarded refresh workflow. A downloaded GitHub archive was compared byte for byte with all 46 original tracked files: no missing or changed files. The downloaded copy passed 36 software tests (5 unrelated sport cases skipped), data integrity checks and a local HTTP server check. See PUBLICATION_CHECKPOINT.md for measured results and remaining work. No changes were made to the existing Multi-Sport Value Engine.
 
-Use Streamlit Community Cloud with branch `main`, entry file `app.py`, and Python 3.12. The root `requirements.txt` and `.streamlit/config.toml` are included. The supplied Dockerfile is an alternative for an existing approved hosting account. Neither platform has been provisioned for this project. Do not pay for hosting without explicit approval.
+Use Streamlit Community Cloud with branch `main`, entry file `app.py`, and Python 3.12. The root `requirements.txt` and `.streamlit/config.toml` are included. The supplied Dockerfile is an alternative for an existing approved hosting account. Streamlit Community Cloud is provisioned at [nfl-statistical-research.streamlit.app](https://nfl-statistical-research.streamlit.app/). Initial hosted checks and the first data refresh passed; see HOSTED_VALIDATION.md. No alternative hosting account has been provisioned. Do not pay for hosting without explicit approval.
 
 Verify the free account’s app count, privacy rules, sleeping behavior, actual memory allocation and execution quota before deployment. After deployment, test scheduled selection, manual comparisons, historical seasons, missing-data cases, mobile layout, repeated switching, concurrent sessions, restarts and actual hosting memory. Record the resulting independent URL; do not invent one.
 
-## Automatic schedule: prepared, OFF until free quota verified
+## Automatic schedule: enabled for public free runners
 
-`.github/workflows/refresh.yml` is independent for this repository. Its scheduled and manual jobs are guarded by `ENABLE_FREE_REFRESH == 'true'`; no jobs will run until that repository variable is explicitly enabled. This prevents unapproved private-repository Actions charges. Confirm included minutes and a spending cap before enabling. The prepared cron is listed in that file in UTC. It is daily, not a real-time end-of-game service. More frequent updates need a verified free scheduler/quota and source freshness checks.
+`.github/workflows/refresh.yml` is independent for this repository. Its scheduled and manual jobs are guarded by `ENABLE_FREE_REFRESH == 'true'`; the variable is enabled. The workflow also requires the repository to remain public, uses the standard ubuntu-latest runner, and uploads no cache or artifacts. GitHub documents standard public-repository runners as free. It stops running if the repository becomes private. The prepared cron is listed in that file in UTC. It is daily, not a real-time end-of-game service. More frequent updates need a verified free scheduler/quota and source freshness checks.
 
 The workflow commits the small prepared database and validation summary; Streamlit can redeploy from that commit. For long-term heavy use, monitor Git history growth and migrate the database to an independently managed approved object store. That storage integration is not configured.
 
