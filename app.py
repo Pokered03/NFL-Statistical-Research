@@ -178,6 +178,22 @@ try:
         if metadata.get('quality_audit'):st.json(metadata['quality_audit'])
         if metadata.get('reference_sources'):st.json(metadata['reference_sources'])
         st.caption('No paid data sources or Odds API keys are used. Team names are text; logos are omitted pending verified usage rights.')
+    with st.expander('Performance and data health'):
+        import resource
+        peak_mib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024
+        st.write(f'Peak web-process memory since startup: {peak_mib:.1f} MiB')
+        for label,paths in [('Hosting memory limit',['/sys/fs/cgroup/memory.max','/sys/fs/cgroup/memory/memory.limit_in_bytes']),('Current hosting memory usage',['/sys/fs/cgroup/memory.current','/sys/fs/cgroup/memory/memory.usage_in_bytes'])]:
+            observed=None
+            for location in paths:
+                try:
+                    raw=Path(location).read_text().strip()
+                    if raw.isdigit() and int(raw)<2**60:
+                        observed=int(raw)/1024**2
+                        break
+                except OSError:
+                    pass
+            st.write(f'{label}: {observed:.1f} MiB' if observed is not None else f'{label}: not exposed by this host')
+        st.caption('Host usage includes other container processes and file cache; process memory measures this app. Local resource targets do not certify long-term hosted stability.')
     st.caption('Independent statistical research · Model and source limitations apply · No picks, parlays or automated wagers')
     st.session_state['_research_render_count']=st.session_state.get('_research_render_count',0)+1
     if st.session_state['_research_render_count']%16==0:
