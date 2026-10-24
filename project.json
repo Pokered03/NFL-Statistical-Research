@@ -1,0 +1,14 @@
+{
+  "repository": "NFL-Statistical-Research",
+  "sport": "nfl",
+  "independent": true,
+  "deployment_status": "not_deployed",
+  "scheduled_refresh_enabled": false,
+  "expected_teams": 32,
+  "data_source_status": "integrated_with_documented_gaps",
+  "status": "locally_tested_development_build_incomplete",
+  "github_repository_created": true,
+  "local_tests_passed": 36,
+  "repository_url": "https://github.com/Pokered03/NFL-Statistical-Research",
+  "github_published": false
+}
