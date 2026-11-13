@@ -1,95 +1,95 @@
 {
-  "n": 349,
-  "brier": 0.23186780018823125,
+  "n": 350,
+  "brier": 0.23225624737774037,
   "baseline_brier": 0.25,
-  "accuracy": 0.6217765042979942,
-  "margin_mae": 10.271411750818189,
-  "total_mae": 10.64561528889644,
-  "ece": 0.08267969306554715,
+  "accuracy": 0.62,
+  "margin_mae": 10.257257551037734,
+  "total_mae": 10.616754408328234,
+  "ece": 0.08417630398393448,
   "calibration_bins": [
     {
       "lower": 0.1,
       "n": 1,
-      "predicted": 0.14663672406229625,
+      "predicted": 0.1466367130018917,
       "observed": 1.0
     },
     {
       "lower": 0.2,
       "n": 19,
-      "predicted": 0.2610764294270145,
+      "predicted": 0.2610764271771225,
       "observed": 0.2631578947368421
     },
     {
       "lower": 0.3,
       "n": 17,
-      "predicted": 0.35563259798638597,
+      "predicted": 0.35563260497252847,
       "observed": 0.23529411764705882
     },
     {
       "lower": 0.4,
       "n": 56,
-      "predicted": 0.45088304277007335,
+      "predicted": 0.4508830610997242,
       "observed": 0.32142857142857145
     },
     {
       "lower": 0.5,
       "n": 86,
-      "predicted": 0.5502403591861607,
+      "predicted": 0.5502403878677662,
       "observed": 0.5465116279069767
     },
     {
       "lower": 0.6,
-      "n": 81,
-      "predicted": 0.6470840664439333,
-      "observed": 0.4691358024691358
+      "n": 82,
+      "predicted": 0.6465889780083985,
+      "observed": 0.4634146341463415
     },
     {
       "lower": 0.7,
       "n": 56,
-      "predicted": 0.7511977079672117,
+      "predicted": 0.751197746255655,
       "observed": 0.7321428571428571
     },
     {
       "lower": 0.8,
       "n": 28,
-      "predicted": 0.8372184290343985,
+      "predicted": 0.8372184654612503,
       "observed": 0.75
     },
     {
       "lower": 0.9,
       "n": 5,
-      "predicted": 0.9153141457873174,
+      "predicted": 0.9153141717843027,
       "observed": 1.0
     }
   ],
-  "margin_interval_80_coverage": 0.7851002865329513,
+  "margin_interval_80_coverage": 0.7857142857142857,
   "version": "adjusted-score-v1",
   "status": "tested",
   "gate": true,
   "calibration_n": 436,
   "calibration_through": "2024-12-29",
   "test_from": "2024-12-30",
-  "test_through": "2026-11-09",
-  "oos_games": 785,
+  "test_through": "2026-11-12",
+  "oos_games": 786,
   "calibrator": {
-    "intercept": 0.05316460146378154,
-    "slope": 1.1302032922272036
+    "intercept": 0.05316470436726693,
+    "slope": 1.1302034113847725
   },
-  "margin_sd": 13.078379149931827,
-  "margin_q10": -15.561808131019887,
-  "margin_q90": 18.149255999084758,
-  "total_q10": -15.597239448767475,
-  "total_q90": 17.195363473363265,
-  "baseline_margin_mae": 11.093083787240824,
-  "baseline_total_mae": 10.870145965286154,
+  "margin_sd": 13.078379149096756,
+  "margin_q10": -15.561808131101236,
+  "margin_q90": 18.149255999043355,
+  "total_q10": -15.59723944817883,
+  "total_q90": 17.195363473484008,
+  "baseline_margin_mae": 11.071109912082848,
+  "baseline_total_mae": 10.842137260923032,
   "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
   "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
   "market_validation": {
     "spread": {
-      "n": 345,
-      "brier": 0.2660856177626194,
+      "n": 346,
+      "brier": 0.2662143508384933,
       "baseline_brier": 0.25,
-      "ece": 0.13988166467225102,
+      "ece": 0.1410881900620459,
       "bins": [
         {
           "lower": 0.2,
@@ -111,9 +111,9 @@
         },
         {
           "lower": 0.5,
-          "n": 129,
-          "predicted": 0.5556503804850295,
-          "observed": 0.43410852713178294
+          "n": 130,
+          "predicted": 0.5556633733239238,
+          "observed": 0.4307692307692308
         },
         {
           "lower": 0.6,
@@ -137,9 +137,9 @@
       "gate": false,
       "categories": {
         "moderate": {
-          "n": 168,
-          "observed_selected_direction_rate": 0.48214285714285715,
-          "wilson_95_lower": 0.40782995725567533,
+          "n": 169,
+          "observed_selected_direction_rate": 0.47928994082840237,
+          "wilson_95_lower": 0.405270639822869,
           "supported": false
         },
         "strong": {
@@ -158,10 +158,10 @@
       ]
     },
     "total": {
-      "n": 349,
-      "brier": 0.26048123716829913,
+      "n": 350,
+      "brier": 0.26008884232928925,
       "baseline_brier": 0.25,
-      "ece": 0.09307063431560686,
+      "ece": 0.09180209698558323,
       "bins": [
         {
           "lower": 0.3,
@@ -183,9 +183,9 @@
         },
         {
           "lower": 0.6,
-          "n": 80,
-          "predicted": 0.6366685779816514,
-          "observed": 0.5125
+          "n": 81,
+          "predicted": 0.6368218371276475,
+          "observed": 0.5185185185185185
         },
         {
           "lower": 0.7,
@@ -203,9 +203,9 @@
       "gate": false,
       "categories": {
         "moderate": {
-          "n": 178,
-          "observed_selected_direction_rate": 0.5,
-          "wilson_95_lower": 0.4273259348855628,
+          "n": 179,
+          "observed_selected_direction_rate": 0.5027932960893855,
+          "wilson_95_lower": 0.4302606570630662,
           "supported": false
         },
         "strong": {
@@ -225,12 +225,12 @@
     }
   },
   "early": {
-    "n": 199,
-    "margin_mae": 10.268361905808552
+    "n": 200,
+    "margin_mae": 10.243607305332525
   },
   "late": {
     "n": 150,
-    "margin_mae": 10.275457878530972
+    "margin_mae": 10.275457878644676
   },
-  "generated_at": "2026-11-12T11:16:56.312659+00:00"
+  "generated_at": "2026-11-13T11:13:38.679332+00:00"
 }
