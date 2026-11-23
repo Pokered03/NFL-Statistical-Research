@@ -1,113 +1,113 @@
 {
-  "n": 347,
-  "brier": 0.22965303064839668,
+  "n": 358,
+  "brier": 0.22875418157804844,
   "baseline_brier": 0.25,
-  "accuracy": 0.6282420749279539,
-  "margin_mae": 10.303082711526919,
-  "total_mae": 10.566555027722721,
-  "ece": 0.08526957553105863,
+  "accuracy": 0.6340782122905028,
+  "margin_mae": 10.299208276832335,
+  "total_mae": 10.577212869277433,
+  "ece": 0.0854855696003778,
   "calibration_bins": [
     {
       "lower": 0.1,
       "n": 1,
-      "predicted": 0.1690300027208835,
+      "predicted": 0.16902997725967808,
       "observed": 0.0
     },
     {
       "lower": 0.2,
-      "n": 14,
-      "predicted": 0.262412961727195,
-      "observed": 0.2857142857142857
+      "n": 15,
+      "predicted": 0.26104660549322584,
+      "observed": 0.3333333333333333
     },
     {
       "lower": 0.3,
-      "n": 22,
-      "predicted": 0.3502346734323599,
-      "observed": 0.22727272727272727
+      "n": 23,
+      "predicted": 0.34876522769639207,
+      "observed": 0.2608695652173913
     },
     {
       "lower": 0.4,
-      "n": 59,
-      "predicted": 0.45215803660313664,
-      "observed": 0.3050847457627119
+      "n": 60,
+      "predicted": 0.45148857663021713,
+      "observed": 0.3
     },
     {
       "lower": 0.5,
-      "n": 87,
-      "predicted": 0.5496542328124333,
-      "observed": 0.5517241379310345
+      "n": 90,
+      "predicted": 0.5499934555052475,
+      "observed": 0.5666666666666667
     },
     {
       "lower": 0.6,
-      "n": 85,
-      "predicted": 0.6451687311364795,
-      "observed": 0.4588235294117647
+      "n": 87,
+      "predicted": 0.6451916629180553,
+      "observed": 0.47126436781609193
     },
     {
       "lower": 0.7,
-      "n": 51,
-      "predicted": 0.7481286054557961,
-      "observed": 0.7647058823529411
+      "n": 52,
+      "predicted": 0.7472661664906729,
+      "observed": 0.7692307692307693
     },
     {
       "lower": 0.8,
-      "n": 26,
-      "predicted": 0.8341607071139243,
-      "observed": 0.8076923076923077
+      "n": 28,
+      "predicted": 0.8324071930463613,
+      "observed": 0.8214285714285714
     },
     {
       "lower": 0.9,
       "n": 2,
-      "predicted": 0.9211181014976391,
+      "predicted": 0.9211181194688773,
       "observed": 1.0
     }
   ],
-  "margin_interval_80_coverage": 0.7665706051873199,
+  "margin_interval_80_coverage": 0.770949720670391,
   "version": "adjusted-score-v1",
   "status": "tested",
   "gate": true,
   "calibration_n": 453,
   "calibration_through": "2025-01-05",
   "test_from": "2025-01-11",
-  "test_through": "2026-11-19",
-  "oos_games": 800,
+  "test_through": "2026-11-22",
+  "oos_games": 811,
   "calibrator": {
-    "intercept": 0.052990105024106275,
-    "slope": 1.0869120306230915
+    "intercept": 0.05299010057609012,
+    "slope": 1.0869121589084811
   },
-  "margin_sd": 13.100448180381088,
-  "margin_q10": -15.293759514783607,
-  "margin_q90": 18.256648208058223,
-  "total_q10": -15.421357716408693,
-  "total_q90": 17.647004927582785,
-  "baseline_margin_mae": 11.194097869672712,
-  "baseline_total_mae": 10.814945421946865,
+  "margin_sd": 13.100448179482312,
+  "margin_q10": -15.29375945805813,
+  "margin_q90": 18.256648207983318,
+  "total_q10": -15.42135771640868,
+  "total_q90": 17.64700492736256,
+  "baseline_margin_mae": 11.231887454817656,
+  "baseline_total_mae": 10.843392498772161,
   "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
   "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
   "market_validation": {
     "spread": {
-      "n": 343,
-      "brier": 0.26792837969487043,
+      "n": 354,
+      "brier": 0.2699035402600292,
       "baseline_brier": 0.25,
-      "ece": 0.14661569452757447,
+      "ece": 0.15310983898928668,
       "bins": [
         {
           "lower": 0.2,
-          "n": 10,
-          "predicted": 0.26158940397350994,
-          "observed": 0.4
+          "n": 13,
+          "predicted": 0.26371200543385975,
+          "observed": 0.5384615384615384
         },
         {
           "lower": 0.3,
-          "n": 33,
-          "predicted": 0.35688005886681384,
-          "observed": 0.3939393939393939
+          "n": 36,
+          "predicted": 0.3555310277164582,
+          "observed": 0.3888888888888889
         },
         {
           "lower": 0.4,
-          "n": 74,
-          "predicted": 0.45042061929479144,
-          "observed": 0.5945945945945946
+          "n": 79,
+          "predicted": 0.4504428982591444,
+          "observed": 0.6075949367088608
         },
         {
           "lower": 0.5,
@@ -143,15 +143,15 @@
       "gate": false,
       "categories": {
         "moderate": {
-          "n": 169,
-          "observed_selected_direction_rate": 0.47928994082840237,
-          "wilson_95_lower": 0.405270639822869,
+          "n": 172,
+          "observed_selected_direction_rate": 0.47093023255813954,
+          "wilson_95_lower": 0.3977840513317335,
           "supported": false
         },
         "strong": {
-          "n": 81,
-          "observed_selected_direction_rate": 0.5308641975308642,
-          "wilson_95_lower": 0.4232652726062298,
+          "n": 86,
+          "observed_selected_direction_rate": 0.5232558139534884,
+          "wilson_95_lower": 0.4189764160545852,
           "supported": false
         }
       },
@@ -159,45 +159,45 @@
       "pushes_excluded": 4,
       "source": "nflverse schedule historical closing line",
       "line_range": [
-        -15.5,
+        -16.5,
         13.5
       ]
     },
     "total": {
-      "n": 347,
-      "brier": 0.26209025695220434,
+      "n": 358,
+      "brier": 0.26196758497556827,
       "baseline_brier": 0.25,
-      "ece": 0.09126476706681677,
+      "ece": 0.08933614512807228,
       "bins": [
         {
           "lower": 0.3,
-          "n": 18,
-          "predicted": 0.35675741967132696,
-          "observed": 0.4444444444444444
+          "n": 19,
+          "predicted": 0.35808063204368534,
+          "observed": 0.47368421052631576
         },
         {
           "lower": 0.4,
-          "n": 118,
-          "predicted": 0.4539229992142777,
-          "observed": 0.5508474576271186
+          "n": 122,
+          "predicted": 0.45391379871892307,
+          "observed": 0.5573770491803278
         },
         {
           "lower": 0.5,
-          "n": 111,
-          "predicted": 0.5516178430085715,
-          "observed": 0.5675675675675675
+          "n": 113,
+          "predicted": 0.551759167008537,
+          "observed": 0.5575221238938053
         },
         {
           "lower": 0.6,
-          "n": 81,
-          "predicted": 0.6364429182677895,
-          "observed": 0.5061728395061729
+          "n": 84,
+          "predicted": 0.6364711447492905,
+          "observed": 0.5119047619047619
         },
         {
           "lower": 0.7,
-          "n": 18,
-          "predicted": 0.7299484915378955,
-          "observed": 0.3888888888888889
+          "n": 19,
+          "predicted": 0.7292901126989659,
+          "observed": 0.42105263157894735
         },
         {
           "lower": 0.8,
@@ -209,15 +209,15 @@
       "gate": false,
       "categories": {
         "moderate": {
-          "n": 170,
-          "observed_selected_direction_rate": 0.5,
-          "wilson_95_lower": 0.42567255222229283,
+          "n": 177,
+          "observed_selected_direction_rate": 0.4858757062146893,
+          "wilson_95_lower": 0.41332949041373757,
           "supported": false
         },
         "strong": {
-          "n": 45,
-          "observed_selected_direction_rate": 0.5111111111111111,
-          "wilson_95_lower": 0.37004224326489743,
+          "n": 47,
+          "observed_selected_direction_rate": 0.5319148936170213,
+          "wilson_95_lower": 0.3923214192677079,
           "supported": false
         }
       },
@@ -231,12 +231,12 @@
     }
   },
   "early": {
-    "n": 214,
-    "margin_mae": 10.336054016032488
+    "n": 225,
+    "margin_mae": 10.328277429422366
   },
   "late": {
     "n": 133,
-    "margin_mae": 10.250031138863823
+    "margin_mae": 10.250031138992059
   },
-  "generated_at": "2026-11-22T17:52:05.755240+00:00"
+  "generated_at": "2026-11-23T22:04:46.585371+00:00"
 }
